@@ -1,0 +1,9 @@
+arm-poky-linux-gnueabi-g++  -march=armv7-a -mthumb-interwork -mfloat-abi=hard -mfpu=neon -mtune=cortex-a9 --sysroot=/opt/fsl-imx6qp-wayland/4.1.15-1.2.0/sysroots/cortexa9hf-vfp-neon-poky-linux-gnueabi/ -g -lm -lOpenCL -lrt -o test main.cpp -w
+
+
+arm-poky-linux-gnueabi-gcc  -march=armv7-a -mthumb-interwork -mfloat-abi=hard -mfpu=neon -mtune=cortex-a9 --sysroot=/opt/fsl-imx-x11/3.14.52-1.1.1/sysroots/cortexa9hf-vfp-neon-poky-linux-gnueabi/ -g -lm -lvpu -lipu -lpthread  -lrt -o enc_test main.c Dec.c Enc.c Capture.c Display.c Fb.c Utils.c Loopback.c Transcode.c -w
+
+arm-poky-linux-gnueabi-g++  -march=armv7-a -mthumb-interwork -mfloat-abi=hard -mfpu=neon -mtune=cortex-a9 --sysroot=/opt/fsl-imx-fb/4.1.15-2.1.0/sysroots/cortexa9hf-neon-poky-linux-gnueabi/ -g -lm -lrt -o test1 signal.c -w
+
+--
+arm-poky-linux-gnueabi-gcc  -march=armv7-a -mthumb-interwork -mfloat-abi=hard -mfpu=neon -mtune=cortex-a9 --sysroot=/home/kang/Yocto/build-6qp/tmp/sysroots/imx6qpsabresd -g -lm -lvpu -lipu -lpthread  -lrt -o test1 signal.c -w

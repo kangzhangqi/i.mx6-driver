@@ -1,0 +1,1 @@
+cmd_/home/kang/i.mx_Driver/hello.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/kang/i.mx_Driver/hello.ko /home/kang/i.mx_Driver/hello.o /home/kang/i.mx_Driver/hello.mod.o

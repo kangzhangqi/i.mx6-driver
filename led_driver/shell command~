@@ -1,0 +1,1 @@
+arm-poky-linux-gnueabi-gcc  -march=armv7-a -mthumb-interwork -mfloat-abi=hard -mfpu=neon -mtune=cortex-a9 --sysroot=/home/kang/Yocto/build-6qp/tmp/sysroots/imx6qpsabresd -g -lm -lvpu -lipu -lpthread  -lrt -o test main.c -w

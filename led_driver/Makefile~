@@ -1,0 +1,15 @@
+KERNEL_DIR = /home/kang/Yocto/build-6qp/tmp/work-shared/imx6qpsabresd/kernel-source
+
+obj-m += module_test.o
+
+all:
+	make -C $(KERNEL_DIR) M=$(shell pwd) modules
+	#/opt/fsl-imx-x11/3.14.52-1.1.1/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc app.c -o app
+
+.PHONY: clean
+
+clean:
+	make -C $(KERNEL_DIR) M=$(shell pwd) modules clean
+	rm -rf modules.order
+	rm -rf app
+
